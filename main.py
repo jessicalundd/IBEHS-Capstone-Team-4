@@ -1,7 +1,7 @@
 import serial
 import time
 
-initial_angle = [0,0,0]
+initial_position = [0,0,0]
 
 with serial.Serial('COM3', 9600, timeout=1) as ser:
     while True:
