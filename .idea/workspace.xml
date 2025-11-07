@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56a5d3dd-0a6d-49b8-9ac8-fc06906f78bb" name="Changes" comment="Nov 7 - First commit&#10;- BNO055_Sketch.ino for collecting linear accelerometry and euler angles from the sensor&#10;- main.py for serial communication with ESP32 and printing data values">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="56a5d3dd-0a6d-49b8-9ac8-fc06906f78bb" name="Changes" comment="Nov 7 - Rename main.py&#10;- Made more descriptive name, BNO055_data_acquisition.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BNO055_data_acquisition.py" beforeDir="false" afterPath="$PROJECT_DIR$/BNO055_data_acquisition.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,17 +33,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jessi/OneDrive - McMaster University/Fall Term 2025/ENGPHYSBME 5P06/IBEHS-Capstone-Team-4&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.BNO055_data_acquisition.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/jessi/OneDrive - McMaster University/Fall Term 2025/ENGPHYSBME 5P06/IBEHS-Capstone-Team-4",
+    "settings.editor.selected.configurable": "pyconsole",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="IBEHS-Capstone-Team-4" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="IBEHS-Capstone-Team-4" />
+      </console-settings>
+    </option>
+    <option name="myUseExistingConsole" value="true" />
+  </component>
+  <component name="RunManager" selected="Python.BNO055_data_acquisition">
+    <configuration name="BNO055_data_acquisition" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IBEHS-Capstone-Team-4" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BNO055_data_acquisition.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="IBEHS-Capstone-Team-4" />
       <option name="ENV_FILES" value="" />
@@ -67,6 +97,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.BNO055_data_acquisition" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -93,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762537306942</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Nov 7 - Rename main.py&#10;- Made more descriptive name, BNO055_data_acquisition.py">
+      <option name="closed" value="true" />
+      <created>1762539149683</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762539149683</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +152,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Nov 7 - First commit&#10;- BNO055_Sketch.ino for collecting linear accelerometry and euler angles from the sensor&#10;- main.py for serial communication with ESP32 and printing data values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nov 7 - First commit&#10;- BNO055_Sketch.ino for collecting linear accelerometry and euler angles from the sensor&#10;- main.py for serial communication with ESP32 and printing data values" />
+    <MESSAGE value="Nov 7 - Rename main.py&#10;- Made more descriptive name, BNO055_data_acquisition.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nov 7 - Rename main.py&#10;- Made more descriptive name, BNO055_data_acquisition.py" />
   </component>
 </project>
