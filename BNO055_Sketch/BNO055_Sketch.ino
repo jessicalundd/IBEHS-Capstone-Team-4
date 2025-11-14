@@ -26,8 +26,8 @@ void setup(void)
 void loop(void) 
 {
   imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
-  imu::Vector<3> accelerometer = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
-  /*bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); */
+  imu::Vector<3> accelerometer = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+  /*  imu::Vector<3> accelerometer = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER); */
 
   /* Display the floating point data */
   
