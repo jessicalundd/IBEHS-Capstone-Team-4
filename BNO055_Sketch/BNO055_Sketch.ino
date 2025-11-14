@@ -26,22 +26,23 @@ void setup(void)
 void loop(void) 
 {
   imu::Vector<3> euler = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
-  imu::Vector<3> accelerometer = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
+  imu::Vector<3> accelerometer = bno.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
+  /*bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); */
 
   /* Display the floating point data */
+  
+  
   Serial.print("Xe: ");
   Serial.print(euler.x());
   Serial.print(" Ye: ");
   Serial.print(euler.y());
   Serial.print(" Ze: ");
   Serial.print(euler.z());
-  Serial.print("\n");
-  
-  Serial.print("Xa: ");
+
+  Serial.print(" Xa: ");
   Serial.print(accelerometer.x());
   Serial.print(" Ya: ");
   Serial.print(accelerometer.y());
   Serial.print(" Za: ");
-  Serial.print(accelerometer.z());
-  Serial.print("\n");
+  Serial.println(accelerometer.z());
 }
