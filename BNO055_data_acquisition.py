@@ -134,24 +134,30 @@ with serial.Serial('COM3', 9600, timeout=1) as ser:
                     indicator = indicator_list[i]
                     if indicator == "pos-neg":
                         if angle >= angle2_list[i]:
-                            print(f'Achieved maximum angle for angle index {i}')
+                            if thru_space[i][1] == 0:
+                                print(f'Achieved maximum angle for angle index {i}')
                             thru_space[i][1] = 1
                         if angle <= angle1_list[i]:
-                            print(f'Achieved minimum angle for angle index {i}')
+                            if thru_space[i][0] == 0:
+                                print(f'Achieved minimum angle for angle index {i}')
                             thru_space[i][0] = 1
                     if indicator == "pos":
                         if 180 > angle >= angle2_list[i]:
-                            print(f'Achieved maximum angle for angle index {i}')
+                            if thru_space[i][1] == 0:
+                                print(f'Achieved maximum angle for angle index {i}')
                             thru_space[i][1] = 1
                         if 180 < angle <= angle1_list[i]:
-                            print(f'Achieved minimum angle for angle index {i}')
+                            if thru_space[i][0] == 0:
+                                print(f'Achieved minimum angle for angle index {i}')
                             thru_space[i][0] = 1
                     if indicator == "neg":
                         if -180 < angle <= angle2_list[i]:
-                            print(f'Achieved maximum angle for angle index {i}')
+                            if thru_space[i][1] == 0:
+                                print(f'Achieved maximum angle for angle index {i}')
                             thru_space[i][1] = 1
                         if -180 > angle >= angle1_list[i]:
-                            print(f'Achieved minimum angle for angle index {i}')
+                            if thru_space[i][0] == 0:
+                                print(f'Achieved minimum angle for angle index {i}')
                             thru_space[i][0] = 1
 
                 if np.all(thru_space):
