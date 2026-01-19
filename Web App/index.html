@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GUI</title>
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <button id="open" class="openButton">Open</button>
+    <script type="module" src="js/script.js">
+      document.getElementById("open").addEventListener("click", togglePause, false);
+      function togglePause() {
+	      OpenOn = 1 - OpenOn;	// toggles between 0 and 1
+        }
+    </script>
+    
+  </body>
+</html>
