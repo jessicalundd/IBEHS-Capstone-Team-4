@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>GUI</title>
-    <style>
-      body { margin: 0; }
-    </style>
-  </head>
-  <body>
-    <button id="open" class="openButton">Open</button>
-    <script type="module" src="js/script.js">
-      document.getElementById("open").addEventListener("click", togglePause, false);
-      function togglePause() {
-	      OpenOn = 1 - OpenOn;	// toggles between 0 and 1
-        }
-    </script>
-    
-  </body>
+
+<head>
+  <title>Capstone Web App</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/script.js"></script>
+</head>
+
+<body>
+
+  <button>File</button>
+  <div id="container">
+    <div id="sidebar">
+      <div id="resize-handle"></div>
+      Patient Data
+    </div>
+    <div id="main">
+      <button>Annotation</button>
+      <button>View</button>
+      Main content
+    </div>
+  </div>
+
+</body>
+
 </html>
