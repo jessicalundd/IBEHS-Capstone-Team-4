@@ -40,3 +40,16 @@ button {
   cursor: ew-resize;
   background: rgba(1,1,1,1);
 }
+
+.annotation-input {
+  position: absolute;
+  background: white;
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+ 
+.annotation-input input {
+  width: 160px;
+  font-size: 12px;
+}

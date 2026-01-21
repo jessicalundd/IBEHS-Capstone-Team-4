@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/styles.css">
   <script type="module" src="js/script.js"></script>
+  <input type="file" id="fileInput" accept=".gltf, .glb" />
 </head>
 
 <body>
@@ -15,14 +16,17 @@
     <div id="sidebar">
       <div id="resize-handle"></div>
       Patient Data
-    </div>
-    <div id="viewport">
-      <button>Annotation</button>
-      <button>View</button>
-      <canvas id="c"></canvas>
-    </div>
-  </div>
-
-</body>
-
-</html>
+      </div>
+      <div id="viewport">
+        <button>Annotation</button>
+        <button>View</button>
+        <canvas id="c"></canvas>
+        <div id="annotationInput" class="annotation-input" hidden>
+          <input type="text" id="annotationText" placeholder="Enter label..." />
+        </div>
+      </div>
+      </div>
+      
+      </body>
+      
+      </html>
