@@ -8,6 +8,7 @@ function main() {
 	const canvas = document.querySelector('#c');
 	const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
 
+	// camera specifications
 	const fov = 45;
 	const aspect = 2; // the canvas default
 	const near = 0.1;
@@ -19,8 +20,10 @@ function main() {
 	controls.target.set(0, 5, 0);
 	controls.update();
 
+	// create scene
 	const scene = new THREE.Scene();
 	scene.background = new THREE.Color('black');
+
 
 	/* {
 
@@ -46,6 +49,7 @@ function main() {
 
 	} */
 
+	// lights
 	{
 
 		const skyColor = 0xB1E1FF; // light blue
@@ -95,32 +99,35 @@ function main() {
 
 	}
 
-	{
+	// load mesh
 
-		const gltfLoader = new GLTFLoader();
-		gltfLoader.load('texturedMesh.glb', (gltf) => {
+	const fileInput = document.getElementById('fileInput');
+	const gltfLoader = new GLTFLoader();
 
+	fileInput.addEventListener('change', (event) => {
+		const file = event.target.files[0];
+		if (!file) return;
+
+		const url = URL.createObjectURL(file);
+
+		gltfLoader.load(url, (gltf) => {
 			const root = gltf.scene;
 			scene.add(root);
 
-			// compute the box that contains all the stuff
-			// from root and below
 			const box = new THREE.Box3().setFromObject(root);
-
 			const boxSize = box.getSize(new THREE.Vector3()).length();
 			const boxCenter = box.getCenter(new THREE.Vector3());
 
-			// set the camera to frame the box
 			frameArea(boxSize * 0.5, boxSize, boxCenter, camera);
 
-			// update the Trackball controls to handle the new size
 			controls.maxDistance = boxSize * 10;
 			controls.target.copy(boxCenter);
 			controls.update();
 
+			URL.revokeObjectURL(url);
 		});
+	});
 
-	}
 
 	function resizeRendererToDisplaySize(renderer) {
 
@@ -155,6 +162,7 @@ function main() {
 	}
 
 	requestAnimationFrame(render);
+
 
 	// ---------- Annotation setup ----------
 	const raycaster = new THREE.Raycaster();
