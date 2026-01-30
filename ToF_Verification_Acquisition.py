@@ -33,7 +33,7 @@ with serial.Serial('COM3', 9600, timeout=1) as ser:
         while True:
             try:
                 if (time.time() - start_time) <= (meas_time*60):
-                    current_data = str(ser.readline())
+                    current_data = float(ser.readline())
                     rolling_buffer.append(current_data)
                     if len(rolling_buffer) > window_size:
                         rolling_buffer.pop(0)
