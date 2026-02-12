@@ -9,15 +9,15 @@ window_size = 10
 calibration_length = 3  # seconds
 sample_delay = 10  # how many samples to skip before updating display
 
-file_path = r"C:\Users\lamcl\Downloads\ToF Verification.xlsx"
+file_path = r"C:\Users\jessi\Downloads\BNO055 Verification.xlsx"
 workbook = openpyxl.load_workbook(filename=file_path)
 sheet = workbook.active
 
 meas_time = 5  # seconds
-angle = 5  # degree
+angle = 10  # degree
 axis = 'X'  # based on axis of rotation on sensor
 
-idx = [0 if axis == 'X' else 1 if axis == 'Y' else 2]
+idx = 0 if axis == 'X' else 1 if axis == 'Y' else 2
 meas_angles = []
 
 with serial.Serial('COM3', 9600, timeout=1) as ser:
@@ -43,10 +43,10 @@ with serial.Serial('COM3', 9600, timeout=1) as ser:
                     split_data[-1] = split_data[-1].strip("\\r\\n'")
                     data_array = np.asarray(split_data[1::2], dtype=float)
 
-                current_data = data_array[idx]
-                rolling_buffer.append(current_data)
-                if len(rolling_buffer) > window_size:
-                    rolling_buffer.pop(0)
+                    current_data = data_array[idx]
+                    rolling_buffer.append(current_data)
+                    if len(rolling_buffer) > window_size:
+                        rolling_buffer.pop(0)
 
                 sample_count += 1
                 if len(rolling_buffer) == window_size and (sample_count % sample_delay == 0):
