@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Capstone Web App</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <script type="module" src="js/script.js"></script> -->
+  <script type="module" src="js/renderer.js"></script>
+
+</head>
+
+<body>
+  <!-- full screen container -->
+  <div id="container">
+
+    <!-- left side bar -->
+    <div id="sidebar">
+      <select id="patient-info"></select>
+      <input type="file" id="video-input" accept="video/mp4">
+      <select id="camera-metadata"></select>
+      <button id="extract-btn" disabled>Start Extraction</button>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <p id="progress-text">0% Complete</p>
+      <div id="image-gallery"></div>
+      <div id="resize-handle"></div>
+    </div>
+
+    <!-- viewport -->
+    <div id="viewport">
+      <button>Annotation</button>
+      <button>View</button>
+      <canvas id="c"></canvas>
+      <div id="annotationInput" class="annotation-input" hidden>
+        <input type="text" id="annotationText" placeholder="Enter label..." />
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
